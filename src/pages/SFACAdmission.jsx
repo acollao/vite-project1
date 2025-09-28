@@ -11,139 +11,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Progress } from "@/components/ui/progress";
+import UNIVERSITIES from "../data/universities";
 
 // -----------------------------------------
 // Mock Data — replace with live, verified data later.
 // -----------------------------------------
-const UNIVERSITIES = [
-  {
-    id: "dlsu-manila",
-    name: "De La Salle University (DLSU) – Manila",
-    location: "Manila",
-    programs: ["BSCS", "BSECE", "BSBA", "AB Psychology"],
-    deadline: "2025-10-15",
-    exam: { name: "DLSU-CET", window: "Sep–Oct 2025" },
-    requirements: [
-      "Online Application Form",
-      "PSA Birth Certificate (scanned PDF)",
-      "Form 137/138 (Certified True Copy)",
-      "Good Moral Certificate",
-      "2x2 ID photo (white background)",
-    ],
-    links: {
-      apply: "https://www.dlsu.edu.ph/",
-      admissions: "https://www.dlsu.edu.ph/admissions/",
-    },
-  },
-  {
-    id: "mapua-manila",
-    name: "Mapúa University – Manila",
-    location: "Manila",
-    programs: ["BSIT", "BSCS", "BSCE", "BSEE"],
-    deadline: "2025-05-31",
-    exam: { name: "MUET", window: "Mar–May 2025" },
-    requirements: [
-      "Online Application Form",
-      "One valid ID",
-      "Form 137/138",
-      "Digital 2x2 photo",
-    ],
-    links: {
-      apply: "https://www.mapua.edu.ph/",
-      admissions: "https://www.mapua.edu.ph/Admissions/",
-    },
-  },
-  {
-    id: "tcu-taguig",
-    name: "Taguig City University (TCU)",
-    location: "Taguig",
-    programs: ["BSBA", "BSEd", "BSIT", "BSPsych"],
-    deadline: "2025-06-15",
-    exam: { name: "TCU Admission Exam", window: "May–Jun 2025" },
-    requirements: [
-      "PSA Birth Certificate",
-      "Form 138 (Report Card)",
-      "Barangay Clearance",
-      "Good Moral Certificate",
-      "2x2 ID photo",
-    ],
-    links: {
-      apply: "https://www.tcu.edu.ph/",
-      admissions: "https://www.tcu.edu.ph/admissions",
-    },
-  },
-  {
-    id: "pup-taguig",
-    name: "Polytechnic University of the Philippines (PUP) – Taguig",
-    location: "Taguig",
-    programs: ["BSIE", "BSECE", "BSIT"],
-    deadline: "2025-04-30",
-    exam: { name: "PUPCET", window: "Mar–Apr 2025" },
-    requirements: [
-      "PUPCET Application",
-      "PSA Birth Certificate",
-      "Form 137/138",
-      "2x2 Photo",
-    ],
-    links: {
-      apply: "https://www.pup.edu.ph/",
-      admissions: "https://www.pup.edu.ph/iapply/",
-    },
-  },
-  {
-    id: "enderun-taguig",
-    name: "Enderun Colleges – Taguig",
-    location: "Taguig",
-    programs: ["BSBA", "BS Entrepreneurship", "Hospitality Management"],
-    deadline: "2025-07-31",
-    exam: { name: "Interview & Assessment", window: "Rolling" },
-    requirements: [
-      "Application Form",
-      "Form 137/138",
-      "Good Moral Certificate",
-      "ID Photo",
-    ],
-    links: {
-      apply: "https://www.enderuncolleges.com/",
-      admissions: "https://www.enderuncolleges.com/admissions/",
-    },
-  },
-  {
-    id: "sti-taguig",
-    name: "STI College – Taguig",
-    location: "Taguig",
-    programs: ["BSIT", "BSTM", "BSHM"],
-    deadline: "2025-08-31",
-    exam: { name: "Assessment Only", window: "Rolling" },
-    requirements: [
-      "Admission Form",
-      "Form 137/138",
-      "Birth Certificate",
-      "2x2 Photo",
-    ],
-    links: {
-      apply: "https://www.sti.edu/",
-      admissions: "https://www.sti.edu/admissions/",
-    },
-  },
-  {
-    id: "dlsu-csb",
-    name: "De La Salle–College of Saint Benilde (CSB)",
-    location: "Manila",
-    programs: ["BSIS", "AB Animation", "Multimedia Arts"],
-    deadline: "2025-06-30",
-    exam: { name: "Benilde Admissions", window: "Apr–Jun 2025" },
-    requirements: [
-      "Application Form",
-      "School Records",
-      "ID Photo",
-    ],
-    links: {
-      apply: "https://www.benilde.edu.ph/",
-      admissions: "https://www.benilde.edu.ph/admissions/",
-    },
-  },
-];
+
 
 const DEFAULT_TASKS = (u) => [
   { id: `acc-${u.id}`, label: `Create account on ${u.name}`, done: false, uni: u.id },
@@ -214,12 +87,24 @@ export default function SFACAdmission() {
   const [bookmarks, setBookmarks] = useLocalStorage(STORAGE.bookmarks, {});
   const [tasksByUni, setTasksByUni] = useLocalStorage(STORAGE.checklist, {});
   const [activeUni, setActiveUni] = useState(null);
+  //const [UNIVERSITIES, setUniversities] = useState([]);
+
+  // initialize record from api
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/api/universities")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //         console.log("📩 Universities API response:", data);
+  //         setUniversities(data);
+  //     })
+  //     .catch((err) => console.error("❌ Fetch error:", err));
+  // }, []);
 
   const programs = useMemo(() => {
     const set = new Set();
     UNIVERSITIES.forEach(u => u.programs.forEach(p => set.add(p)));
     return Array.from(set).sort();
-  }, []);
+  }, [UNIVERSITIES]);
 
   const filtered = useMemo(() => {
     let list = [...UNIVERSITIES];
@@ -237,7 +122,7 @@ export default function SFACAdmission() {
       return 0;
     });
     return list;
-  }, [loc, program, query, sort]);
+  }, [loc, program, query, sort, UNIVERSITIES]);
 
   function toggleBookmark(id) {
     setBookmarks(prev => ({ ...prev, [id]: !prev[id] }));
