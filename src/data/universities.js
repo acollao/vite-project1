@@ -217,6 +217,176 @@ const UNIVERSITIES = [
       admissions: "https://www.ceu.edu.ph/admissions",
     },
   },
+  {
+    id: "tup",
+    name: "Technological University of the Philippines (TUP)",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "TUP Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://tup.edu.ph/",
+      admissions: "https://ers.tup.edu.ph/aims/applicants/?utm_source=chatgpt.com",
+    },
+  },
+  {
+    id: "tfvc",
+    name: "The Fisher Valley College",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://tfvc.edu.ph/",
+      admissions: "https://tfvc.edu.ph/",
+    },
+  },
+  
+  {
+    id: "tic",
+    name: "Treston International College",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://treston.edu.ph/",
+      admissions: "https://treston.edu.ph/",
+    },
+  },
+  
+  {
+    id: "lpum",
+    name: "LPU Manila (Lyceum of the Philippines University Manila)",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://manila.lpu.edu.ph/",
+      admissions: "https://manila.lpu.edu.ph/",
+    },
+  },
+  
+  {
+    id: "feu",
+    name: "FEU (Far Eastern University)",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://manila.lpu.edu.ph/",
+      admissions: "https://manila.lpu.edu.ph/",
+    },
+  },
+  
+  {
+    id: "sbu",
+    name: "San Beda University",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://www.sanbeda.edu.ph/",
+      admissions: "https://www.sanbeda.edu.ph/",
+    },
+  },
+  
+  {
+    id: "aut",
+    name: "Arellano University",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://www.arellano.edu.ph/",
+      admissions: "https://arellano.edu.ph/admission/enrollment-procedure/",
+    },
+  },
+  
+  {
+    id: "aum",
+    name: "Adamson University",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://www.adamson.edu.ph/",
+      admissions: "https://www.adamson.edu.ph/",
+    },
+  },
+  
+  {
+    id: "pnu",
+    name: "Philippine Normal University",
+    location: "Manila",
+    programs: ["Dentistry", "Pharmacy", "Medical Technology"],
+    deadline: "2025-09-30",
+    exam: { name: "Entrance Test", window: "Aug–Sep 2025" },
+    requirements: [
+      "Application Form",
+      "Form 137/138",
+      "Good Moral Certificate",
+      "2x2 ID Photo",
+    ],
+    links: {
+      apply: "https://www.pnu.edu.ph/",
+      admissions: "https://www.pnu.edu.ph/",
+    },
+  },
+
 ];
 
 export default UNIVERSITIES;

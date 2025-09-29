@@ -87,9 +87,9 @@ export default function SFACAdmission() {
   const [bookmarks, setBookmarks] = useLocalStorage(STORAGE.bookmarks, {});
   const [tasksByUni, setTasksByUni] = useLocalStorage(STORAGE.checklist, {});
   const [activeUni, setActiveUni] = useState(null);
-  //const [UNIVERSITIES, setUniversities] = useState([]);
+  // const [UNIVERSITIES, setUniversities] = useState([]);
 
-  // initialize record from api
+  // // initialize record from api
   // useEffect(() => {
   //   fetch("http://localhost:4000/api/universities")
   //     .then((res) => res.json())
