@@ -5,7 +5,7 @@ const UNIVERSITIES = [
     name: "De La Salle University (DLSU) – Manila",
     location: "Manila",
     programs: ["BSCS", "BSECE", "BSBA", "AB Psychology"],
-    deadline: "2025-10-15",
+    deadline: "2025-12-15",
     exam: { name: "DLSU-CET", window: "Sep–Oct 2025" },
     requirements: [
       "Online Application Form",
@@ -24,7 +24,7 @@ const UNIVERSITIES = [
     name: "Mapúa University – Manila",
     location: "Manila",
     programs: ["BSIT", "BSCS", "BSCE", "BSEE"],
-    deadline: "2025-05-31",
+    deadline: "2025-10-30",
     exam: { name: "MUET", window: "Mar–May 2025" },
     requirements: [
       "Online Application Form",
@@ -125,24 +125,6 @@ const UNIVERSITIES = [
     links: {
       apply: "https://www.benilde.edu.ph/",
       admissions: "https://www.benilde.edu.ph/admissions/",
-    },
-  },
-   {
-    id: "sfac-manila",
-    name: "SFAC Manila",
-    location: "Manila",
-    programs: ["BSIT", "BSTM", "BSBA"],
-    deadline: "2025-07-31",
-    exam: { name: "SFAC Entrance Exam", window: "Jun–Jul 2025" },
-    requirements: [
-      "Online Application Form",
-      "PSA Birth Certificate",
-      "Form 137/138",
-      "Certificate of Good Moral Character",
-    ],
-    links: {
-      apply: "https://sfac.edu.ph/manila",
-      admissions: "https://sfac.edu.ph/admissions",
     },
   },
   {
