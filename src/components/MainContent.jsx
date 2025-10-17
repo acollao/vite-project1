@@ -61,7 +61,7 @@ function DeadlineBadge({ deadline }) {
   const soon = d <= 31;
   return (
     <Badge className={`text-xs ${urgent ? "bg-red-600" : soon ? "bg-amber-500" : "bg-emerald-600"}`} aria-label={`Deadline in ${d} days`}>
-      <CalendarDays className="size-3 mr-1" /> {deadline} ({d} day{d === 1 ? "" : "s"} left)
+      <CalendarDays className="size-3 mr-1" /> {deadline} ({d} day{d === 1 ? "" : "s"} {d < 0 ? "ago" : "left"})
     </Badge>
   );
 }
